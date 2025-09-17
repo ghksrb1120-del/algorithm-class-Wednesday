@@ -61,7 +61,7 @@ class CircularQueueOneSlotEmpty:
             idx = (idx + 1) % self.N
         print("items =", items)
 
-        # 2) 슬롯별 시각화: 빈 칸은 None, 채워진 칸은 값 (랩어라운드 고려)
+        # 2) 내부 배열 슬롯별 시각화: 빈 칸은 None, 채워진 칸은 값 (랩어라운드 고려)
         print("slots=[", end="")
         for i in range(self.N):
             if self.front < self.rear:
@@ -80,6 +80,8 @@ class CircularQueueOneSlotEmpty:
             print(val, end="   ")
             
         print("]")
+
+#end for class
 
   
 # ----------------------------
