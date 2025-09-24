@@ -14,8 +14,14 @@ class Node:
         self.link = link # 다음 노드를 가리키는 주소값을 저장(링크) 필드
 
     # 노드 기반 삽입 연산
-    def append(self, node): # 현재 노드 (self) 뒤에 새 노드 (new)를 연결 연산
-        self.link = node
+    def append(self, new): # 현재 노드 (self) 뒤에 새 노드 (new)를 연결 연산
+        if new is not None:
+            new.link = self.link # new의 다음 노드는 현재 노드(self)의 다음 노드로 수정
+            self.link = new  # 현재 노드(self)의 다음 노드를 new로 수정
+
+    # 노드 기반 삭제 연산
+    def popNext(self):  
+
 
 # 코드 3.2: 단순연결리스트 클래스
 """
